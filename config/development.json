@@ -1,0 +1,14 @@
+{
+  "server": {
+    "port": 3005
+  },
+  "client": {
+    "id": "xxxxxxxxxxx",
+    "secret": "xxxxxxxx"
+  },
+  "api": {
+    "endpoint": {
+      "token": "http://localhost:3000/api/oauth/token"
+    }
+  }
+}
