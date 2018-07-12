@@ -1,4 +1,4 @@
-# backend_RP
+# backend_RP (Resource Owner Password Credentials)
 
 ## install
 ```
