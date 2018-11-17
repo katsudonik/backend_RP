@@ -1,0 +1,19 @@
+<input type="hidden" name="assertion" value="<%= SAMLResponse %>">
+<script>
+	document.addEventListener('DOMContentLoaded',function(){
+	  var s = document.querySelector('[name=assertion]').value;
+	  var x = new XMLHttpRequest();
+	  var d = {SAMLResponse:s};
+	  x.onload = function(){
+	    if(!x){return location.href='/login'};
+	    if(x.responseType!=='json'){return location.href='/login'};
+	    var r = JSON.parse(x.response);
+	    var t = r.access_token;
+	    localStorage.setItem('token',t);
+	    return location.href='/login';
+	  };
+	  x.open('POST','/applications/api/login/saml_consume');
+	  x.setRequestHeader('Content-Type', 'application/json;charset=UTF-8');
+	  x.send(JSON.stringify(d));
+	});
+</script>
