@@ -1,0 +1,20 @@
+{
+  "server": {
+    "port": 3016
+  },
+  "client": {
+    "id": "yyyyyyy",
+    "secret": "yyyyyyyyy"
+  },
+  "api": {
+    "endpoint": {
+      "token": "http://127.0.0.1:8080/oauth/token.json",
+      "revoke_token": "http://127.0.0.1:8080/oauth/revoke.json",
+      "saml": {
+      	"init": "http://127.0.0.1:8080/api/private/saml/init",
+	    "consume": "http://127.0.0.1:8080/api/private/saml/consume"
+      }
+    }
+  },
+  "saml_pattern": "^.+@saml.co.jp$"
+}
