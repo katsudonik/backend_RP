@@ -1,6 +1,6 @@
 {
   "server": {
-    "port": 3005
+    "port": 3015
   },
   "client": {
     "id": "xxxxxxxxxxx",
@@ -8,7 +8,13 @@
   },
   "api": {
     "endpoint": {
-      "token": "http://localhost:3000/api/oauth/token"
+      "token": "http://127.0.0.1:8080/oauth/token.json",
+      "revoke_token": "http://127.0.0.1:8080/oauth/revoke.json",
+      "saml": {
+      	"init": "http://127.0.0.1:8080/api/private/saml/init",
+	    "consume": "http://127.0.0.1:8080/api/private/saml/consume"
+      }
     }
-  }
+  },
+  "saml_pattern": "^.+@saml.co.jp$"
 }
